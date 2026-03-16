@@ -1,0 +1,49 @@
+lzc-sdk-version: "0.1"
+name: Manyfold
+package: xyz.mxue.manyfold
+version: 0.0.1
+description: Manyfold 是一个开源的 Web 应用程序，用于管理 3D 模型集合，尤其专注于 3D 打印。
+homepage: https://github.com/manyfold3d/manyfold
+author: manyfold3d
+application:
+  subdomain: manyfold
+  background_task: false
+  multi_instance: false
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  routes:
+    - /=http://manyfold.xyz.mxue.manyfold.lzcapp:3214/
+services:
+  manyfold:
+    image: registry.lazycat.cloud/mxuexxmy/xxmymxue/manyfold:5a456b1d306dd6c5
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - SECRET_KEY_BASE=lazycatcloud.cloudcatlazy
+      - REDIS_URL=redis://redis:6379/1
+      - DATABASE_ADAPTER=postgresql
+      - DATABASE_HOST=postgres
+      - DATABASE_PORT=5432
+      - DATABASE_USER=manyfold
+      - DATABASE_PASSWORD=password
+      - DATABASE_NAME=manyfold
+      - REGISTRATION=enabled
+      - MULTIUSER=enabled
+    depends_on:
+      - postgres
+      - redis
+    binds:
+      - /lzcapp/var/models:/models
+  postgres:
+    image: registry.lazycat.cloud/mxuexxmy/library/postgres:17fe34ee6b3060c6
+    environment:
+      - POSTGRES_USER=manyfold
+      - POSTGRES_PASSWORD=password
+    binds:
+      - /lzcapp/var/data:/var/lib/postgresql/data
+  redis:
+    image: registry.lazycat.cloud/mxuexxmy/library/redis:7f346df9cd82ade3
+unsupported_platforms:
+  - ios
+  - android

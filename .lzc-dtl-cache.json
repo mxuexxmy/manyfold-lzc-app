@@ -1,0 +1,47 @@
+{
+  "name": "Manyfold",
+  "package": "xyz.mxue.manyfold",
+  "description": "Manyfold 是一个开源的 Web 应用程序，用于管理 3D 模型集合，尤其专注于 3D 打印。",
+  "homepage": "https://github.com/manyfold3d/manyfold",
+  "author": "manyfold3d",
+  "app_features": [],
+  "subdomain": "manyfold",
+  "version": "0.0.1",
+  "iconPath": "lzc-app-icon.png",
+  "composePath": "docker-compose.yml",
+  "unsupported_platforms": [
+    "ios",
+    "android"
+  ],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "manyfold_3214_3214": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_xxmymxue_manyfold_0.103.2": {
+    "originalImage": "xxmymxue/manyfold:0.103.2",
+    "pushTarget": "lazycat",
+    "newImageName": "registry.lazycat.cloud/mxuexxmy/xxmymxue/manyfold:5a456b1d306dd6c5",
+    "timestamp": "2025-03-16T07:03:34.351Z"
+  },
+  "manyfold_volume_/models_action": "emptyDir",
+  "image_postgres_15": {
+    "originalImage": "postgres:15",
+    "pushTarget": "lazycat",
+    "newImageName": "registry.lazycat.cloud/mxuexxmy/library/postgres:17fe34ee6b3060c6",
+    "timestamp": "2025-03-16T07:04:09.212Z"
+  },
+  "postgres_volume_/var/lib/postgresql/data_action": "emptyDir",
+  "postgres_volume_/var/lib/postgresql/data_location": "app_data",
+  "image_redis_7": {
+    "originalImage": "redis:7",
+    "pushTarget": "lazycat",
+    "newImageName": "registry.lazycat.cloud/mxuexxmy/library/redis:7f346df9cd82ade3",
+    "timestamp": "2025-03-16T07:04:53.088Z"
+  },
+  "manyfold_volume_/models_location": "app_data"
+}

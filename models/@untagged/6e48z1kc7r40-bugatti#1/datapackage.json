@@ -1,0 +1,46 @@
+{
+  "name": "6e48z1kc7r40-bugatti",
+  "title": "6e48z1kc7r40 Bugatti",
+  "description": "",
+  "homepage": "http://localhost:3214/models/t7pm1c5tx0jp",
+  "keywords": [
+    "!new"
+  ],
+  "licenses": [
+    {
+      "name": "MIT",
+      "path": "https://spdx.org/licenses/MIT.html"
+    }
+  ],
+  "resources": [
+    {
+      "name": "bugatti",
+      "path": "bugatti.blend",
+      "mediatype": "model/x-blender"
+    },
+    {
+      "name": "bugatti",
+      "path": "bugatti.mtl",
+      "mediatype": "model/mtl"
+    },
+    {
+      "name": "bugatti",
+      "path": "bugatti.obj",
+      "mediatype": "model/obj"
+    },
+    {
+      "name": "readme",
+      "path": "README.txt",
+      "mediatype": "text/plain"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Xing Long",
+      "path": "http://localhost:3214/creators/xing-long",
+      "roles": [
+        "creator"
+      ]
+    }
+  ]
+}

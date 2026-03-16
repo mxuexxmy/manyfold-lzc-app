@@ -1,0 +1,19 @@
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+node_modules/
+vendor/
+__pycache__/
+*.log
+.env
+.env.local
+dist/
+build/
+db_data/
+
+# Large files and binary assets
+*.lpk
+*.obj
+*.blend
+*.mtl
