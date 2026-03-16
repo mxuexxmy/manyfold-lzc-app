@@ -11,9 +11,3 @@ __pycache__/
 dist/
 build/
 db_data/
-
-# Large files and binary assets
-*.lpk
-*.obj
-*.blend
-*.mtl
